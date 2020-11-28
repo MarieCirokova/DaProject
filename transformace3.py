@@ -4,10 +4,10 @@ from haversine import haversine
 
 dataFrame = pandas.read_csv('in/tables/vydejna_balicky_output_2.csv', encoding='utf-8')
 
-LUZINY = (50.044, 14.332)
-ANDEL = (50.074, 14.404)
-DEJVICKA = (50.100, 14.392)
-HAJE = (50.031, 14.534)
+LUZINY = (XX.XXX, XX.XXX)
+ANDEL = (XX.XXX, XX.XXX)
+DEJVICKA = (XX.XXX, XX.XXX)
+HAJE = (XX.XXX, XX.XXX)
 
 def mamVytvoritNovouJizdu(balicek, predchoziBalicek):
     return balicek['cislo_jizdy'] != predchoziBalicek['cislo_jizdy'] or balicek['vydejna'] != predchoziBalicek['vydejna'] or balicek['datetime'] != predchoziBalicek['datetime']
