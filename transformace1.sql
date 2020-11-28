@@ -4,10 +4,10 @@ SELECT "orderId"
     , "rideId"
     , "legStartedAt" AS orderCreatedAt
     , CASE
-   WHEN "legDestinationLat" = 50.044 AND "legDestinationLon" = 14.332 THEN 'LUZINY'
-   WHEN "legDestinationLat" = 50.074 AND "legDestinationLon" = 14.404 THEN 'ANDEL'
-   WHEN "legDestinationLat" = 50.100 AND "legDestinationLon" = 14.392 THEN 'DEJVICKA'
-   WHEN "legDestinationLat" = 50.031 AND "legDestinationLon" = 14.534 THEN 'HAJE'
+   WHEN "legDestinationLat" = XX.XXX AND "legDestinationLon" = XX.XXX THEN 'LUZINY'
+   WHEN "legDestinationLat" = XX.XXX AND "legDestinationLon" = XX.XXX THEN 'ANDEL'
+   WHEN "legDestinationLat" = XX.XXX AND "legDestinationLon" = XX.XXX THEN 'DEJVICKA'
+   WHEN "legDestinationLat" = XX.XXX AND "legDestinationLon" = XX.XXX THEN 'HAJE'
    ELSE 'CHYBA'
    END AS pick_up_place
 FROM delivery_legs
@@ -24,17 +24,17 @@ SELECT row_number() over ( order by OPU."orderId", DL1."legDestinationLat" ) as 
             END  AS date_midd
    , OPU.pick_up_place
    , CASE 
-    WHEN OPU.pick_up_place = 'HAJE' then '50.031'
-    WHEN OPU.pick_up_place = 'LUZINY' then '50.044'
-    WHEN OPU.pick_up_place = 'DEJVICKA' then '50.100'
-    WHEN OPU.pick_up_place = 'ANDEL' then '50.074'
+    WHEN OPU.pick_up_place = 'HAJE' then 'XX.XXX'
+    WHEN OPU.pick_up_place = 'LUZINY' then 'XX.XXX'
+    WHEN OPU.pick_up_place = 'DEJVICKA' then 'XX.XXX'
+    WHEN OPU.pick_up_place = 'ANDEL' then 'XX.XXX'
     ELSE 'CHYBA'
     END AS PICK_UP_LAT
      , CASE 
-    WHEN OPU.pick_up_place = 'HAJE' then '14.534'
-    WHEN OPU.pick_up_place = 'LUZINY' then '14.332'
-    WHEN OPU.pick_up_place = 'DEJVICKA' then '14.392'
-    WHEN OPU.pick_up_place = 'ANDEL' then '14.404'
+    WHEN OPU.pick_up_place = 'HAJE' then 'XX.XXX'
+    WHEN OPU.pick_up_place = 'LUZINY' then 'XX.XXX'
+    WHEN OPU.pick_up_place = 'DEJVICKA' then 'XX.XXX'
+    WHEN OPU.pick_up_place = 'ANDEL' then 'XX.XXX'
     ELSE 'CHYBA'
     END AS PICK_UP_LON
    , DL1."legDestinationLat"
